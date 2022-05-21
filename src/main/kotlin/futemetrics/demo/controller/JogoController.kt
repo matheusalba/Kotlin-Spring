@@ -29,4 +29,9 @@ val jogoService: JogoService
     fun consultarEscanteiosMandante(@PathVariable id:Long):Int{
         return jogoService.retornaEscanteiosMandante(id)
     }
+
+    @GetMapping("/gols/{id}")
+    fun consultarTotalGols(@PathVariable id:Long):Int{
+        return jogoService.retornaTotalGoldoClube(id)
+    }
 }

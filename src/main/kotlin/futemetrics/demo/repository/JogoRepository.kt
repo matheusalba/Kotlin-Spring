@@ -18,5 +18,19 @@ import org.springframework.stereotype.Repository
         @Param("id") id: Long
     ):Int
 
+    @Query("select \n" +
+            "sum(j.clube_casa_gol) as gols_casa\n" +
+            "from jogo j\n" +
+            "where j.clube_casa_id = :id ", nativeQuery = true)
+    fun golsCasa(
+        @Param("id") id:Long
+    ):Int
 
+    @Query("select \n" +
+            "sum(j.clube_visitante_gol) as gols_visitante \n" +
+            "from jogo j\n" +
+            "where j.clube_visitante_id = :id ", nativeQuery = true)
+    fun golsFora(
+        @Param("id") id:Long
+    ):Int
 }

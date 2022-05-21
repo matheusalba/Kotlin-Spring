@@ -3,5 +3,5 @@
 ### Persistência em PostgeSQl
 ### Endpoints:
 * POSTs e GETs convencionais para consultar e cadastar as entidades
-* GET -> localhost:8080/jogo/id -> Total de escanteios do clube do id como mandante
-  
+* GET -> localhost:8080/jogo/id -> Total de escanteios do clube do Id como mandante
+* GET -> localhost:8080/jogo/gols/id Total de gols por Id 

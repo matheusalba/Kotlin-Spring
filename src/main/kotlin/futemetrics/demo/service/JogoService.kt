@@ -28,6 +28,11 @@ class JogoService(
         return jogoRepository.retornarEscanteiosCasa(id)
     }
 
+    fun retornaTotalGoldoClube(id:Long):Int{
+        val golsCasa :Int = jogoRepository.golsCasa(id)
+        val golsFora :Int = jogoRepository.golsFora(id)
+        return golsCasa+golsFora
+    }
 
     /*Funções auxiliares */
     fun funcaoAuxiliarRetornaNomeClubePorId(id:Long):String{
